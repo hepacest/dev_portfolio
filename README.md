@@ -11,7 +11,7 @@ Here you will find various applications and experiments that reflect my technica
 
 | Project  | Link  | Description  | 
 |---|---|---|
-|  markdown-editor |   | Markdown editor with real-time preview  | 
+|  markdown-editor | https://github.com/hepacest/markdown-editor  | Markdown editor with real-time preview  | 
 |   |   |   | 
 
 
