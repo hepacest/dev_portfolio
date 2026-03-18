@@ -9,9 +9,9 @@ Here you will find various applications and experiments that reflect my technica
 ## Structure
 
 
-| Project  | Link  | Description  | 
+| Project  | Description  |  Link  |
 |---|---|---|
-|  markdown-editor | https://github.com/hepacest/markdown-editor  | Markdown editor with real-time preview  | 
+|  markdown-editor | Markdown editor with real-time preview  | https://github.com/hepacest/markdown-editor  |
 |   |   |   | 
 
 
