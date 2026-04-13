@@ -6,7 +6,7 @@ export default function Home() {
       {/* Global Header */}
       <header className="app__header">
         <div className="app__header-inner">
-          <h1 className="app__title">Helen Patricia Acero Castro</h1>
+          <h1 className="app__title">Helen Patricia Acero Castro | HEPAC</h1>
           <p className="app__subtitle"> Developer | Ingeniera de Sistemas | IA aplicada al desarrollo | Mejora continua</p>
         </div>
       </header>
@@ -51,9 +51,9 @@ export default function Home() {
                     </div>
 
                     <div className="project-card__links">
-                      <a href={project.demo} target="_blank" className="project-card__link">
+                      {/*<a href={project.demo} target="_blank" className="project-card__link">
                         Demo
-                      </a>
+                      </a> */}
                       <a href={project.github} target="_blank" className="project-card__link">
                         Código
                       </a>
@@ -70,8 +70,13 @@ export default function Home() {
               <h2 className="about__title">Sobre mí</h2>
 
               <p className="about__text">
-                Desarrollador enfocado en construir productos rápidos,
-                limpios y funcionales. Interesado en AI y SaaS.
+                Soy <strong>Desarrolladora Backend</strong> especializada en <strong>Java y Spring</strong>, con una trayectoria enfocada en crear sistemas robustos para los <strong>sectores de banca, telecomunicaciones y gobierno</strong>. Mi fuerte es construir lógica de negocio sólida y escalable, garantizando siempre la eficiencia en entornos de alta demanda.
+              </p>  
+              <p className="about__text">
+                Recientemente, <strong>he expandido mi stack hacia el Frontend y la integración de IA</strong>, transformando ideas en proyectos funcionales y abiertos a la comunidad. Creo firmemente que <strong>la programación debe resolver problemas reales</strong>; por eso, diseño mis proyectos personales con el objetivo de que sean herramientas útiles para otros desarrolladores.
+              </p>  
+              <p className="about__text">
+                Mi meta actual es evolucionar en la intersección entre un backend sólido y las nuevas posibilidades que ofrece la inteligencia artificial, optimizando procesos y <strong>creando software con propósito</strong>.
               </p>
             </section>
 
@@ -83,26 +88,18 @@ export default function Home() {
         <div className="app__footer-inner">
           <div className="app__footer-grid">
             <div>
-              <h3 className="app__footer-title">Características</h3>
+              <h3 className="app__footer-title">Desarrollo Frontend</h3>
               <ul className="app__footer-list">
-                <li>✓ Conversión en tiempo real</li>
-                <li>✓ Protección contra XSS</li>
-                <li>✓ Interfaz intuitiva</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="app__footer-title">Tecnologías</h3>
-              <ul className="app__footer-list">
-                <li>React + Vite</li>
+                <li>React / Vite</li>
                 <li>Tailwind CSS</li>
-                <li>Marked + DOMPurify</li>
+                <li>DOMPurify (Security)</li>
               </ul>
             </div>
             <div>
-              <h3 className="app__footer-title">Información</h3>
+              <h3 className="app__footer-title">DevOps</h3>
               <ul className="app__footer-list">
-                <li>v1.0</li>
-                <li>2026 © HEPAC</li>
+                <li>Vercel</li>
+                <li>GitHub Actions</li>
               </ul>
             </div>
           </div>

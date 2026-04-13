@@ -107,7 +107,7 @@ body {
 }
 
 .about__text {
-  @apply text-slate-600 max-w-2xl;
+  @apply mb-4 text-slate-600 max-w-2xl;
 }
 
 .app__footer {
