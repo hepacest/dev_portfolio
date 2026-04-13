@@ -1,6 +1,8 @@
-﻿export default function Home() {
+﻿import { projects } from "@/data/projects";
+
+export default function Home() {
   return (
-    <div>
+    <div className="app">
       {/* Global Header */}
       <header className="app__header">
         <div className="app__header-inner">
@@ -9,12 +11,10 @@
         </div>
       </header>
 
-      <main className="app">
-        <section className="app__main">
-          <div className="app__container">
+      <main className="app__main">
+        <div className="app__container">
             {/* HERO */}
             <section className="app__hero">
-
               <div className="app__actions">
                 <a href="#projects" className="app__link">
                   Ver proyectos
@@ -24,9 +24,92 @@
                 </a>
               </div>
             </section>
+
+            {/* PROJECTS */}
+            <section id="projects" className="projects">
+              <h2 className="section__title">Proyectos</h2>
+
+              <div className="projects__grid">
+                {projects.map((project, i) => (
+                  <article key={i} className="project-card">
+                    <h3 className="project-card__title">
+                      {project.name}
+                    </h3>
+
+                    <p className="project-card__description">
+                      {project.description}
+                    </p>
+
+                    <div className="project-card__tech-list">
+                      {project.tech.map((t, i) => (
+                        <span key={i} className="project-card__tech">
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="project-card__links">
+                      <a href={project.demo} target="_blank" className="project-card__link">
+                        Demo
+                      </a>
+                      <a href={project.github} target="_blank" className="project-card__link">
+                        Código
+                      </a>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </section>
+
+
+            {/* ABOUT ME */}
+            <section id="about_me" className="about">
+              <h2 className="about__title">Sobre mí</h2>
+
+              <p className="about__text">
+                Desarrollador enfocado en construir productos rápidos,
+                limpios y funcionales. Interesado en AI y SaaS.
+              </p>
+            </section>
+
           </div>
-        </section>
       </main>
+
+      {/* Global Footer */}
+      <footer className="app__footer">
+        <div className="app__footer-inner">
+          <div className="app__footer-grid">
+            <div>
+              <h3 className="app__footer-title">Características</h3>
+              <ul className="app__footer-list">
+                <li>✓ Conversión en tiempo real</li>
+                <li>✓ Protección contra XSS</li>
+                <li>✓ Interfaz intuitiva</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="app__footer-title">Tecnologías</h3>
+              <ul className="app__footer-list">
+                <li>React + Vite</li>
+                <li>Tailwind CSS</li>
+                <li>Marked + DOMPurify</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="app__footer-title">Información</h3>
+              <ul className="app__footer-list">
+                <li>v1.0</li>
+                <li>2026 © HEPAC</li>
+              </ul>
+            </div>
+          </div>
+          <div className="app__footer-bottom">
+            <p>Diseñado con ❤️ por © HEPAC</p>
+          </div>
+        </div>
+      </footer>
+
+
     </div>
   );
 }

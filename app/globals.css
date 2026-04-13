@@ -29,10 +29,6 @@ body {
   @apply flex flex-col min-h-screen bg-slate-100;
 }
 
-.app--resizing .app__layout {
-  user-select: none;
-}
-
 .app__header {
   @apply bg-gradient-to-r from-slate-800 to-slate-700 text-white shadow-lg;
 }
@@ -53,10 +49,6 @@ body {
   margin-bottom: 4rem;
 }
 
-.app__hero-subtitle {
-  margin-bottom: 1.5rem;
-}
-
 .app__main {
   @apply grow p-10;
 }
@@ -65,76 +57,56 @@ body {
   @apply max-w-7xl mx-auto bg-white rounded-xl border border-slate-200 shadow-sm;
 }
 
-.app__layout {
-  @apply flex relative;
-  height: 600px;
-  user-select: auto;
+.projects {
+  margin-top: 0;
 }
 
-.app__editor-panel {
-  @apply flex flex-col border-r border-slate-200 overflow-hidden;
-  flex: 0 0 var(--editor-width, 50%);
-  min-width: 220px;
+.section__title {
+  @apply text-2xl font-semibold mb-6;
 }
 
-.app__editor-header {
-  @apply bg-slate-200 px-4 py-2 border-b border-slate-300;
+.projects__grid {
+  @apply grid md:grid-cols-2 gap-6;
 }
 
-.app__editor-title {
-  @apply text-sm font-semibold text-slate-700;
+.project-card {
+  @apply border p-4 rounded-xl;
 }
 
-.app__toolbar {
-  @apply bg-slate-900 px-3 py-2 flex gap-2;
+.project-card__title {
+  @apply text-xl font-semibold mb-2;
 }
 
-.app__toolbar-button {
-  @apply px-3 py-1 bg-slate-600 text-white rounded text-sm hover:bg-slate-500;
+.project-card__description {
+  @apply text-slate-600 mb-3;
 }
 
-.app__toolbar-button--bold {
-  @apply font-bold;
+.project-card__tech-list {
+  @apply flex flex-wrap gap-2 mb-3;
 }
 
-.app__toolbar-button--italic {
-  @apply italic;
+.project-card__tech {
+  @apply text-sm border px-2 py-1 rounded;
 }
 
-.app__toolbar-button--heading {
-  @apply text-xs font-bold;
+.project-card__links {
+  @apply flex gap-4 text-sm;
 }
 
-.app__textarea {
-  @apply flex-1 p-4 bg-slate-800 text-slate-200 font-mono text-sm resize-none outline-none;
+.project-card__link {
+  @apply underline text-slate-700 hover:text-slate-900;
 }
 
-.app__divider {
-  @apply cursor-col-resize bg-slate-300 hover:bg-slate-400;
-  width: 8px;
-  z-index: 20;
+.about {
+  @apply mt-20;
 }
 
-.app__preview-panel {
-  @apply flex flex-col;
-  flex: 1;
-  min-width: 220px;
+.about__title {
+  @apply text-2xl font-semibold mb-4;
 }
 
-.app__preview-header {
-  @apply bg-blue-100 px-4 py-2 border-b border-blue-200 flex justify-between items-center;
-}
-
-.app__preview-title {
-  @apply text-sm font-semibold text-blue-800;
-}
-
-.app__preview-badge {
-  @apply bg-blue-600 text-white text-xs px-3 py-1 rounded-full;
-}
-
-.app__preview-content {
-  @apply flex-1 p-6 bg-white overflow-auto;
+.about__text {
+  @apply text-slate-600 max-w-2xl;
 }
 
 .app__footer {
