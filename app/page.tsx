@@ -55,6 +55,7 @@ export default function Home() {
                       <a href={project.github} target="_blank" className="project-card__link">
                         Código
                       </a>
+                      <span className="project-card__category">{project.category}</span>
                     </div>
                   </article>
                 ))}

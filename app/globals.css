@@ -86,11 +86,16 @@ body {
 }
 
 .project-card__links {
-  @apply flex gap-4 text-sm;
+  @apply flex items-center gap-4 text-sm;
 }
 
 .project-card__link {
   @apply underline text-slate-700 hover:text-slate-900;
+}
+
+.project-card__category {
+  @apply inline-flex items-center rounded text-white font-bold text-xs uppercase px-2 py-1 ml-auto;
+  background: linear-gradient(90deg, #1e293b 0%, #334155 100%);
 }
 
 .about {
