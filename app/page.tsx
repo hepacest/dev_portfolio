@@ -33,7 +33,9 @@ export default function Home() {
                 {projects.map((project, i) => (
                   <article key={i} className="project-card">
                     <h3 className="project-card__title">
-                      {project.name}
+                      <a href={project.web} target="_blank" className="project-card__link">
+                        {project.name}
+                      </a>
                     </h3>
 
                     <p className="project-card__description">
