@@ -1,18 +1,10 @@
 export const projects = [
     {
-        name: "AI Resume Builder",
-        description: "Generador de CV con IA",
-        tech: ["Next.js", "OpenAI"],
-        category: "AI",
+        name: "Visor Markdown",
+        description: "Convierte Markdown a HTML en tiempo real",
+        tech: ["React", "Vite", "Tailwind CSS"],
+        category: "Tools",
         demo: "https://tu-demo.com",
-        github: "https://github.com/"
-    },
-    {
-        name: "Task App",
-        description: "Gestor de tareas simple",
-        tech: ["React", "Node"],
-        category: "Frontend",
-        demo: "https://tu-demo.com",
-        github: "https://github.com/"
+        github: "https://github.com/hepacest/markdown-editor"
     }
 ];

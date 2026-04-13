@@ -7,19 +7,19 @@ export default function Home() {
       <header className="app__header">
         <div className="app__header-inner">
           <h1 className="app__title">Helen Patricia Acero Castro</h1>
-          <p className="app__subtitle"> Desarrollador Full Stack enfocado en apps modernas</p>
+          <p className="app__subtitle"> Developer | Ingeniera de Sistemas | IA aplicada al desarrollo | Mejora continua</p>
         </div>
       </header>
 
       <main className="app__main">
-        <div className="app__container">
+        <div >
             {/* HERO */}
             <section className="app__hero">
               <div className="app__actions">
                 <a href="#projects" className="app__link">
                   Ver proyectos
                 </a>
-                <a href="https://github.com/" target="_blank" className="app__link app__link--secondary">
+                <a href="https://github.com/hepacest/helen_acero_dev_portfolio?tab=readme-ov-file" target="_blank" className="app__link app__link--secondary">
                   GitHub
                 </a>
               </div>

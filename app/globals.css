@@ -53,10 +53,6 @@ body {
   @apply grow p-10;
 }
 
-.app__container {
-  @apply max-w-7xl mx-auto bg-white rounded-xl border border-slate-200 shadow-sm;
-}
-
 .projects {
   margin-top: 0;
 }
@@ -70,7 +66,7 @@ body {
 }
 
 .project-card {
-  @apply border p-4 rounded-xl;
+  @apply border border-dashed bg-white p-4 rounded-xl;
 }
 
 .project-card__title {
