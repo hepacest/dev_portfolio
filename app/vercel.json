@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/markdown-editor",
+      "destination": "https://markdown-editor-iota-eosin.vercel.app/"
+    },
+    {
+      "source": "/markdown-editor/:path*",
+      "destination": "https://markdown-editor-iota-eosin.vercel.app/:path*"
+    }
+  ]
+}
