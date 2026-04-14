@@ -1,4 +1,4 @@
-# Software Project Portfolio (helen_acero_dev_portfolio | HEPAC)
+# Software Project Portfolio (dev_portfolio | HEPAC)
 
 This repository brings together a collection of projects focused on backend and frontend development, applying best practices in software engineering, architecture, and security.
 
