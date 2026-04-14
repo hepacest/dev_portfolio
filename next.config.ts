@@ -5,11 +5,11 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/proyecto-b',
-        destination: 'https://proyecto-b.vercel.app',
+        destination: 'https://markdown-editor-iota-eosin.vercel.app',
       },
       {
         source: '/proyecto-b/:path*',
-        destination: 'https://proyecto-b.vercel.app/:path*',
+        destination: 'https://markdown-editor-iota-eosin.vercel.app/:path*',
       },
     ];
   },
