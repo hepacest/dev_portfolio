@@ -28,7 +28,7 @@ body {
 }
 
 .app {
-  @apply flex flex-col min-h-screen bg-slate-100;
+  @apply flex flex-col min-h-screen bg-slate-100 px-4 sm:px-6 lg:px-8;
 }
 
 .app__header {
@@ -36,39 +36,44 @@ body {
 }
 
 .app__header-inner {
-  @apply max-w-7xl mx-auto px-6 md:px-10 py-6;
+  @apply max-w-[95rem] mx-auto px-4 sm:px-6 md:px-10 py-6;
 }
 
 .app__title {
-  @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight;
+  @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;
 }
 
 .app__subtitle {
-  @apply text-slate-300 text-sm md:text-base lg:text-lg mt-2 max-w-3xl;
+  @apply text-slate-300 text-base md:text-lg lg:text-xl mt-2 max-w-4xl;
 }
 
 .app__hero {
-  @apply mb-16;
+  @apply mb-16 flex flex-col gap-6 justify-center w-full max-w-[90rem] mx-auto;
 }
 
 .app__main {
-  @apply grow px-6 md:px-10 py-8;
+  @apply grow px-0 md:px-10 py-8;
+  max-width: min(100%, 95rem);
+  margin: 0 auto;
 }
 
 .projects {
   margin-top: 0;
+  max-width: min(100%, 95rem);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section__title {
-  @apply text-2xl md:text-3xl font-semibold mb-6;
+  @apply text-2xl md:text-3xl lg:text-4xl font-semibold mb-6;
 }
 
 .projects__grid {
-  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+  @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6;
 }
 
 .project-card {
-  @apply border border-dashed bg-white p-4 sm:p-6 rounded-xl;
+  @apply border border-dashed bg-white p-4 sm:p-6 rounded-xl min-h-[220px] shadow-sm;
 }
 
 .project-card__title {
@@ -101,7 +106,7 @@ body {
 }
 
 .about {
-  @apply mt-20 px-0 sm:px-6;
+  @apply mt-20 w-full;
 }
 
 .about__title {
@@ -110,7 +115,7 @@ body {
 
 .about__text {
   @apply mb-4 text-slate-600 leading-8 mx-auto;
-  max-width: min(100%, 72rem);
+  max-width: min(100%, 92rem);
   font-size: clamp(1rem, 1.05vw, 1.125rem);
 }
 
@@ -119,7 +124,7 @@ body {
 }
 
 .app__footer-inner {
-  @apply max-w-7xl mx-auto px-6 md:px-10 py-6;
+  @apply max-w-[95rem] mx-auto px-4 sm:px-6 md:px-10 py-6;
 }
 
 .app__footer-grid {
@@ -149,5 +154,3 @@ body {
 .app__link--secondary {
   @apply text-slate-600 hover:text-slate-800;
 }
-
-
