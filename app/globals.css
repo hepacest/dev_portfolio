@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f172a;
 }
 
 @theme inline {
@@ -12,16 +12,12 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* Keep the site consistently in the light theme across browsers */
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: #ffffff;
+  color: #0f172a;
+  color-scheme: light;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
   line-height: 1.65;
@@ -66,6 +62,7 @@ body {
 
 .section__title {
   @apply text-2xl md:text-3xl lg:text-4xl font-semibold mb-6;
+  color: #0f172a;
 }
 
 .projects__grid {
@@ -73,15 +70,17 @@ body {
 }
 
 .project-card {
-  @apply border border-dashed bg-white p-4 sm:p-6 rounded-xl min-h-[220px] shadow-sm;
+  @apply border border-slate-300 border-dashed bg-white p-4 sm:p-6 rounded-xl min-h-[220px] shadow-sm;
 }
 
 .project-card__title {
   @apply text-xl md:text-2xl font-semibold mb-2;
+  color: #0f172a;
 }
 
 .project-card__description {
-  @apply text-slate-600 mb-3 leading-7;
+  @apply mb-3 leading-7;
+  color: #334155;
 }
 
 .project-card__tech-list {
@@ -90,6 +89,8 @@ body {
 
 .project-card__tech {
   @apply text-xs sm:text-sm border px-2 py-1 rounded;
+  color: #334155;
+  border-color: #cbd5e1;
 }
 
 .project-card__links {
@@ -98,6 +99,7 @@ body {
 
 .project-card__link {
   @apply underline text-slate-700 hover:text-slate-900;
+  color: #0f172a;
 }
 
 .project-card__category {
@@ -111,10 +113,12 @@ body {
 
 .about__title {
   @apply text-2xl md:text-3xl font-semibold mb-4;
+  color: #0f172a;
 }
 
 .about__text {
-  @apply mb-4 text-slate-600 leading-8 mx-auto;
+  @apply mb-4 leading-8 mx-auto;
+  color: #334155;
   max-width: min(100%, 92rem);
   font-size: clamp(1rem, 1.05vw, 1.125rem);
 }
@@ -149,8 +153,10 @@ body {
 
 .app__link {
   @apply inline-block underline text-slate-700 hover:text-slate-900;
+  color: #0f172a;
 }
 
 .app__link--secondary {
   @apply text-slate-600 hover:text-slate-800;
+  color: #475569;
 }
