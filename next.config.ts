@@ -4,11 +4,11 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [
       {
-        source: '/proyecto-b',
+        source: '/markdown-editor',
         destination: 'https://markdown-editor-iota-eosin.vercel.app',
       },
       {
-        source: '/proyecto-b/:path*',
+        source: '/markdown-editor/:path*',
         destination: 'https://markdown-editor-iota-eosin.vercel.app/:path*',
       },
     ];
