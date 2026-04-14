@@ -23,6 +23,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
 .app {
@@ -34,23 +36,23 @@ body {
 }
 
 .app__header-inner {
-  @apply max-w-7xl mx-auto px-10 py-6;
+  @apply max-w-7xl mx-auto px-6 md:px-10 py-6;
 }
 
 .app__title {
-  @apply text-3xl font-bold;
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight;
 }
 
 .app__subtitle {
-  @apply text-slate-300 text-sm mt-1;
+  @apply text-slate-300 text-sm md:text-base lg:text-lg mt-2 max-w-3xl;
 }
 
 .app__hero {
-  margin-bottom: 4rem;
+  @apply mb-16;
 }
 
 .app__main {
-  @apply grow p-10;
+  @apply grow px-6 md:px-10 py-8;
 }
 
 .projects {
@@ -58,23 +60,23 @@ body {
 }
 
 .section__title {
-  @apply text-2xl font-semibold mb-6;
+  @apply text-2xl md:text-3xl font-semibold mb-6;
 }
 
 .projects__grid {
-  @apply grid md:grid-cols-2 gap-6;
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
 }
 
 .project-card {
-  @apply border border-dashed bg-white p-4 rounded-xl;
+  @apply border border-dashed bg-white p-4 sm:p-6 rounded-xl;
 }
 
 .project-card__title {
-  @apply text-xl font-semibold mb-2;
+  @apply text-xl md:text-2xl font-semibold mb-2;
 }
 
 .project-card__description {
-  @apply text-slate-600 mb-3;
+  @apply text-slate-600 mb-3 leading-7;
 }
 
 .project-card__tech-list {
@@ -82,11 +84,11 @@ body {
 }
 
 .project-card__tech {
-  @apply text-sm border px-2 py-1 rounded;
+  @apply text-xs sm:text-sm border px-2 py-1 rounded;
 }
 
 .project-card__links {
-  @apply flex items-center gap-4 text-sm;
+  @apply flex flex-col sm:flex-row sm:items-center gap-3 text-sm;
 }
 
 .project-card__link {
@@ -94,20 +96,22 @@ body {
 }
 
 .project-card__category {
-  @apply inline-flex items-center rounded text-white font-bold text-xs uppercase px-2 py-1 ml-auto;
+  @apply inline-flex items-center rounded text-white font-bold text-xs uppercase px-2 py-1 ml-0 sm:ml-auto;
   background: linear-gradient(90deg, #1e293b 0%, #334155 100%);
 }
 
 .about {
-  @apply mt-20;
+  @apply mt-20 px-0 sm:px-6;
 }
 
 .about__title {
-  @apply text-2xl font-semibold mb-4;
+  @apply text-2xl md:text-3xl font-semibold mb-4;
 }
 
 .about__text {
-  @apply mb-4 text-slate-600 max-w-2xl;
+  @apply mb-4 text-slate-600 leading-8 mx-auto;
+  max-width: min(100%, 72rem);
+  font-size: clamp(1rem, 1.05vw, 1.125rem);
 }
 
 .app__footer {
@@ -115,11 +119,11 @@ body {
 }
 
 .app__footer-inner {
-  @apply max-w-7xl mx-auto px-10 py-6;
+  @apply max-w-7xl mx-auto px-6 md:px-10 py-6;
 }
 
 .app__footer-grid {
-  @apply grid grid-cols-3 gap-8 mb-6;
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-6;
 }
 
 .app__footer-title {
@@ -135,11 +139,11 @@ body {
 }
 
 .app__actions {
-  @apply flex gap-4;
+  @apply flex flex-col sm:flex-row sm:items-center gap-3;
 }
 
 .app__link {
-  @apply underline text-slate-700 hover:text-slate-900;
+  @apply inline-block underline text-slate-700 hover:text-slate-900;
 }
 
 .app__link--secondary {
