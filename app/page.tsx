@@ -104,7 +104,7 @@ export default function Home() {
             </div>
           </div>
           <div className="app__footer-bottom">
-            <p>Diseñado con ❤️ por © HEPAC 2026</p>
+            <p>Diseñado con ❤️ por © HEPAC 2026 </p>
           </div>
         </div>
       </footer>
