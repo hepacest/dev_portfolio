@@ -36,7 +36,7 @@ body {
 }
 
 .app__title {
-  @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight;
 }
 
 .app__subtitle {
@@ -70,17 +70,17 @@ body {
 }
 
 .project-card {
-  @apply border border-slate-300 border-dashed bg-white p-4 sm:p-6 rounded-xl min-h-[220px] shadow-sm;
+  @apply border border-slate-400 border-dashed bg-white p-4 sm:p-6 rounded-xl min-h-[220px] shadow-sm;
 }
 
 .project-card__title {
   @apply text-xl md:text-2xl font-semibold mb-2;
-  color: #0f172a;
+  color: #111827;
 }
 
 .project-card__description {
   @apply mb-3 leading-7;
-  color: #334155;
+  color: #1f2937;
 }
 
 .project-card__tech-list {
@@ -89,8 +89,8 @@ body {
 
 .project-card__tech {
   @apply text-xs sm:text-sm border px-2 py-1 rounded;
-  color: #334155;
-  border-color: #cbd5e1;
+  color: #1f2937;
+  border-color: #94a3b8;
 }
 
 .project-card__links {
@@ -98,8 +98,8 @@ body {
 }
 
 .project-card__link {
-  @apply underline text-slate-700 hover:text-slate-900;
-  color: #0f172a;
+  @apply underline text-slate-900 hover:text-slate-900;
+  color: #111827;
 }
 
 .project-card__category {
@@ -113,12 +113,12 @@ body {
 
 .about__title {
   @apply text-2xl md:text-3xl font-semibold mb-4;
-  color: #0f172a;
+  color: #111827;
 }
 
 .about__text {
   @apply mb-4 leading-8 mx-auto;
-  color: #334155;
+  color: #1f2937;
   max-width: min(100%, 92rem);
   font-size: clamp(1rem, 1.05vw, 1.125rem);
 }
