@@ -6,8 +6,18 @@ export default function Home() {
       {/* Global Header */}
       <header className="app__header">
         <div className="app__header-inner">
-          <h1 className="app__title">Helen Patricia Acero Castro | HEPAC</h1>
-          <p className="app__subtitle"> Developer | Ingeniera de Sistemas | IA aplicada al desarrollo | Mejora continua</p>
+          <div>
+            <h1 className="app__title">Helen Patricia Acero Castro | HEPAC</h1>
+            <p className="app__subtitle"> Developer | Ingeniera de Sistemas | IA aplicada al desarrollo | Mejora continua</p>
+          </div>
+          <div className="app__lang-switch">
+            <button type="button" className="app__lang-btn" aria-label="Cambiar a inglés" title="English">
+              <img src="/flags/us.svg" alt="Bandera de Estados Unidos" className="app__flag-img" />
+            </button>
+            <button type="button" className="app__lang-btn" aria-label="Cambiar a español" title="Español">
+              <img src="/flags/co.svg" alt="Bandera de Colombia" className="app__flag-img" />
+            </button>
+          </div>
         </div>
       </header>
 
