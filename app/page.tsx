@@ -1,6 +1,16 @@
-﻿import { projects } from "@/data/projects";
+﻿"use client";
+
+import { useState } from "react";
+import { projects } from "@/data/projects";
+import es from "./languages/es";
+import en from "./languages/en";
+
+const translations = { es, en };
 
 export default function Home() {
+  const [locale, setLocale] = useState<"es" | "en">("es");
+  const t = translations[locale];
+
   return (
     <div className="app">
       {/* Global Header */}
@@ -8,13 +18,25 @@ export default function Home() {
         <div className="app__header-inner">
           <div>
             <h1 className="app__title">Helen Patricia Acero Castro | HEPAC</h1>
-            <p className="app__subtitle"> Developer | Ingeniera de Sistemas | IA aplicada al desarrollo | Mejora continua</p>
+            <p className="app__subtitle">{t.subtitle}</p>
           </div>
           <div className="app__lang-switch">
-            <button type="button" className="app__lang-btn" aria-label="Cambiar a inglés" title="English">
+            <button
+              type="button"
+              className={`app__lang-btn ${locale === "en" ? "app__lang-btn--active" : ""}`}
+              aria-label={t.ariaEnglish}
+              title="English"
+              onClick={() => setLocale("en")}
+            >
               <img src="/flags/us.svg" alt="Bandera de Estados Unidos" className="app__flag-img" />
             </button>
-            <button type="button" className="app__lang-btn" aria-label="Cambiar a español" title="Español">
+            <button
+              type="button"
+              className={`app__lang-btn ${locale === "es" ? "app__lang-btn--active" : ""}`}
+              aria-label={t.ariaSpanish}
+              title="Español"
+              onClick={() => setLocale("es")}
+            >
               <img src="/flags/co.svg" alt="Bandera de Colombia" className="app__flag-img" />
             </button>
           </div>
@@ -27,17 +49,17 @@ export default function Home() {
             <section className="app__hero">
               <div className="app__actions">
                 <a href="#projects" className="app__link">
-                  Ver proyectos
+                  {t.viewProjects}
                 </a>
                 <a href="https://github.com/hepacest/helen_acero_dev_portfolio?tab=readme-ov-file" target="_blank" className="app__link app__link--secondary">
-                  GitHub
+                  {t.github}
                 </a>
               </div>
             </section>
 
             {/* PROJECTS */}
             <section id="projects" className="projects">
-              <h2 className="section__title">Proyectos</h2>
+              <h2 className="section__title">{t.projectsTitle}</h2>
 
               <div className="projects__grid">
                 {projects.map((project, i) => (
@@ -49,13 +71,13 @@ export default function Home() {
                     </h3>
 
                     <p className="project-card__description">
-                      {project.description}
+                      {project.description[locale]}
                     </p>
 
                     <div className="project-card__tech-list">
-                      {project.tech.map((t, i) => (
+                      {project.tech.map((techItem, i) => (
                         <span key={i} className="project-card__tech">
-                          {t}
+                          {techItem}
                         </span>
                       ))}
                     </div>
@@ -65,9 +87,9 @@ export default function Home() {
                         Demo
                       </a> */}
                       <a href={project.github} target="_blank" className="project-card__link">
-                        Código
+                        {t.codeLabel}
                       </a>
-                      <span className="project-card__category">{project.category}</span>
+                      <span className="project-card__category">{project.category[locale]}</span>
                     </div>
                   </article>
                 ))}
@@ -77,16 +99,16 @@ export default function Home() {
 
             {/* ABOUT ME */}
             <section id="about_me" className="about">
-              <h2 className="about__title">Sobre mí</h2>
+              <h2 className="about__title">{t.aboutTitle}</h2>
 
               <p className="about__text">
-                Soy <strong>Desarrolladora Backend</strong> especializada en <strong>Java y Spring</strong>, con una trayectoria enfocada en crear sistemas robustos para los <strong>sectores de banca, telecomunicaciones y gobierno</strong>. Mi fuerte es construir lógica de negocio sólida y escalable, garantizando siempre la eficiencia en entornos de alta demanda.
+                {t.aboutText1}
               </p>  
               <p className="about__text">
-                Recientemente, <strong>he expandido mi stack hacia el Frontend y la integración de IA</strong>, transformando ideas en proyectos funcionales y abiertos a la comunidad. Creo firmemente que <strong>la programación debe resolver problemas reales</strong>; por eso, diseño mis proyectos personales con el objetivo de que sean herramientas útiles para otros desarrolladores.
+                {t.aboutText2}
               </p>  
               <p className="about__text">
-                Mi meta actual es evolucionar en la intersección entre un backend sólido y las nuevas posibilidades que ofrece la inteligencia artificial, optimizando procesos y <strong>creando software con propósito</strong>.
+                {t.aboutText3}
               </p>
             </section>
 
@@ -98,7 +120,7 @@ export default function Home() {
         <div className="app__footer-inner">
           <div className="app__footer-grid">
             <div>
-              <h3 className="app__footer-title">Desarrollo Frontend</h3>
+              <h3 className="app__footer-title">{t.footerFrontend}</h3>
               <ul className="app__footer-list">
                 <li>React / Vite</li>
                 <li>Tailwind CSS</li>
@@ -106,7 +128,7 @@ export default function Home() {
               </ul>
             </div>
             <div>
-              <h3 className="app__footer-title">DevOps</h3>
+              <h3 className="app__footer-title">{t.footerDevops}</h3>
               <ul className="app__footer-list">
                 <li>Vercel</li>
                 <li>GitHub Actions</li>
@@ -114,7 +136,7 @@ export default function Home() {
             </div>
           </div>
           <div className="app__footer-bottom">
-            <p>Diseñado con ❤️ por © HEPAC 2026 </p>
+            <p>{t.footerBottom}</p>
           </div>
         </div>
       </footer>
