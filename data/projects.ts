@@ -1,4 +1,6 @@
-export const projects = [
+import type { Project } from "@/types/project";
+
+export const projects: Project[] = [
     {
         name: "Visor Markdown",
         description: {
@@ -12,6 +14,6 @@ export const projects = [
         },
         demo: "https://tu-demo.com",
         github: "https://github.com/hepacest/markdown-editor",
-        web: "/markdown-editor"
-    }
+        web: "/markdown-editor",
+    },
 ];

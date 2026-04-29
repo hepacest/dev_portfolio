@@ -1,107 +1,118 @@
-# Software Project Portfolio (HEPAC)
+# HEPAC Developer Portfolio
 
-**Helen Patricia Acero Castro** — Portfolio site showcasing software projects focused on backend and frontend development, applying best practices in software engineering, architecture, and security.
+I am Helen Patricia Acero Castro, and this is my portfolio, focused on presenting software projects of interest to me while applying software engineering best practices.
 
-The site supports **Spanish and English** (ES / EN) and is built as a Next.js application.
+> **Lectura en español:** Este proyecto también está documentado en [español](README.es.md).
 
----
+## About The Project
 
-## 🛠️ Tech Stack
+This repository contains a personal portfolio. It presents selected projects, a short professional profile, and a language toggle for Spanish and English visitors.
 
-| Technology | Version |
+### Functional Requirements
+
+- Display a project catalog with name, category, description, and source code links.
+- Support bilingual content switching between Spanish and English.
+- Expose a dedicated route for each project and redirect visitors to the deployed application.
+
+### Non-Functional Requirements
+
+- Responsive interface for desktop and mobile browsing.
+- Clear, low-friction navigation.
+- Maintainable structure with reusable React components and centralized language data.
+
+## Technical Stack
+
+| Layer | Technology |
 |---|---|
-| [Next.js](https://nextjs.org/) | 16.2.3 |
-| [React](https://react.dev/) | 19.2.4 |
-| [Tailwind CSS](https://tailwindcss.com/) | 4.2.2 |
-| [TypeScript](https://www.typescriptlang.org/) | 5.9.3 |
-| [ESLint](https://eslint.org/) | 9.39.4 |
+| Framework | [Next.js](https://nextjs.org/) 16.2.4 |
+| UI | [React](https://react.dev/) 19.2.4 |
+| Language | [TypeScript](https://www.typescriptlang.org/) 5 |
+| Styling | [Tailwind CSS](https://tailwindcss.com/) 4 |
+| Linting | [ESLint](https://eslint.org/) 9 |
 
----
+## Architecture And Logic
 
-## 🚀 Getting Started
+The application follows a simple App Router structure:
+
+- `app/` contains the main routes, the global layout, and the project redirect route.
+- `components/` contains reusable UI sections such as header, footer, about, and project cards.
+- `data/` centralizes project metadata and language dictionaries.
+- `public/` stores static assets such as flags.
+- `types/` defines shared TypeScript types used in the application.
+
+### Information Flow
+
+1. The main page loads the selected locale in client state.
+2. Translation strings are read from `data/languages`.
+3. Project metadata is read from `data/projects.ts` and rendered through reusable components.
+4. The `app/markdown-editor` route redirects to the project's external deployment.
+
+## Quick Start
+
+### Prerequisites
+
+- Node.js 20+ recommended
+- npm 10+ recommended
+
+### Installation
 
 ```bash
-# Install dependencies
+git clone https://github.com/hepacest/dev_portfolio.git
+cd dev_portfolio
 npm install
+```
 
-# Start development server
+### Environment Variables
+
+This project currently does not require a `.env` file for local execution.
+
+### Development
+
+```bash
 npm run dev
+```
 
-# Build for production
+Open `http://localhost:3000` in your browser.
+
+### Production
+
+```bash
 npm run build
-
-# Start production server
 npm start
 ```
 
----
+## Project Structure
 
-## 📋 Projects
-
-| Project | Description | Code | Web site |
-|---|---|---|---|
-| markdown-editor | Markdown editor with real-time preview | [GitHub](https://github.com/hepacest/markdown-editor) | [Go](https://markdown-editor.hepac.dev/) |
-
-⭐ If any project interests you, you can explore it in detail within its corresponding folder.
-
----
-
-## 📧 Contact
-
-* Email: [hepacest@gmail.com](mailto:hepacest@gmail.com)
-
----
-
-# Portafolio de Proyectos de Software (HEPAC)
-
-**Helen Patricia Acero Castro** — Sitio de portafolio que presenta proyectos de software enfocados en desarrollo backend y frontend, aplicando buenas prácticas de ingeniería de software, arquitectura y seguridad.
-
-El sitio soporta **español e inglés** (ES / EN) y está construido con una aplicación en Next.js.
-
----
-
-## 🛠️ Tecnologías
-
-| Tecnología | Versión |
-|---|---|
-| [Next.js](https://nextjs.org/) | 16.2.3 |
-| [React](https://react.dev/) | 19.2.4 |
-| [Tailwind CSS](https://tailwindcss.com/) | 4.2.2 |
-| [TypeScript](https://www.typescriptlang.org/) | 5.9.3 |
-| [ESLint](https://eslint.org/) | 9.39.4 |
-
----
-
-## 🚀 Inicio Rápido
-
-```bash
-# Instalar dependencias
-npm install
-
-# Iniciar servidor de desarrollo
-npm run dev
-
-# Compilar para producción
-npm run build
-
-# Iniciar servidor en producción
-npm start
+```text
+.
+├── app/                  # App Router pages and layout
+├── components/           # Reusable UI sections and cards
+├── data/                 # Project data and translations
+├── public/               # Static assets
+├── types/                # Shared TypeScript types
+├── eslint.config.mjs     # ESLint configuration
+├── next.config.ts        # Next.js configuration
+└── package.json          # Scripts and dependencies
 ```
 
----
+## Current Projects
 
-## 📋 Proyectos
+| Project | Description | Stack | Code | Live |
+|---|---|---|---|---|
+| Markdown Editor | Markdown editor with real-time preview | React, Vite, Tailwind CSS | [GitHub](https://github.com/hepacest/markdown-editor) | [Website](https://markdown-editor.hepac.dev/) |
 
-| Proyecto | Descripción | Código | Web |
-|---|---|---|---|
-| markdown-editor | Editor Markdown con vista previa en tiempo real | [GitHub](https://github.com/hepacest/markdown-editor) | [Ir](https://markdown-editor.hepac.dev/) |
+## Project Status
 
-⭐ Si algún proyecto te interesa, puedes explorarlo en detalle dentro de su carpeta correspondiente.
+In production and under continuous improvement.
 
----
+## Contributing
 
-## 📧 Contacto
+Contributions are not formally open yet. If you want to suggest improvements or report issues, please open an issue or contact the author first.
 
-* Email: [hepacest@gmail.com](mailto:hepacest@gmail.com)
+## License
 
----
+No license file is currently defined in this repository.
+
+## Contact
+
+- Email: [hepacest@gmail.com](mailto:hepacest@gmail.com)
