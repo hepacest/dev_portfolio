@@ -12,8 +12,6 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* Keep the site consistently in the light theme across browsers */
-
 body {
   background: #ffffff;
   color: #0f172a;
@@ -27,40 +25,8 @@ body {
   @apply flex flex-col min-h-screen bg-slate-100 px-4 sm:px-6 lg:px-8;
 }
 
-.app__header {
-  @apply bg-gradient-to-r from-slate-800 to-slate-700 text-white shadow-lg;
-}
-
-.app__header-inner {
-  @apply max-w-[95rem] mx-auto px-4 sm:px-6 md:px-10 py-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between;
-}
-
-.app__title {
-  @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight;
-}
-
-.app__subtitle {
-  @apply text-slate-300 text-base md:text-lg lg:text-xl mt-2 max-w-4xl;
-}
-
 .app__hero {
   @apply mb-16 flex flex-col gap-6 justify-center w-full max-w-[90rem] mx-auto;
-}
-
-.app__lang-switch {
-  @apply mt-5 flex items-center gap-3 justify-end;
-}
-
-.app__lang-btn {
-  @apply inline-flex items-center justify-center rounded-full border border-slate-300 bg-white/90 w-6 h-6 p-0.5 text-slate-900 shadow-sm transition hover:bg-slate-100;
-}
-
-.app__lang-btn--active {
-  @apply border-slate-800 bg-slate-100;
-}
-
-.app__flag-img {
-  @apply w-4 h-4 rounded-full object-cover;
 }
 
 .app__main {
@@ -137,30 +103,6 @@ body {
   color: #1f2937;
   max-width: min(100%, 92rem);
   font-size: clamp(1rem, 1.05vw, 1.125rem);
-}
-
-.app__footer {
-  @apply bg-slate-900 text-slate-400 shadow-sm border-t border-slate-700;
-}
-
-.app__footer-inner {
-  @apply max-w-[95rem] mx-auto px-4 sm:px-6 md:px-10 py-6;
-}
-
-.app__footer-grid {
-  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-6;
-}
-
-.app__footer-title {
-  @apply text-white font-semibold mb-3;
-}
-
-.app__footer-list {
-  @apply text-sm space-y-1;
-}
-
-.app__footer-bottom {
-  @apply border-t border-slate-700 pt-4 text-center text-sm;
 }
 
 .app__actions {

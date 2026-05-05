@@ -1,4 +1,5 @@
 const es = {
+  title: "Helen Patricia Acero Castro | HEPAC",
   subtitle: "Developer | Ingeniera de Sistemas | IA aplicada al desarrollo | Mejora continua",
   viewProjects: "Ver proyectos",
   github: "GitHub",
