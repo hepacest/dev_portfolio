@@ -107,10 +107,7 @@ In production and under continuous improvement.
 
 ## Contributing
 
-Contributions are not formally open yet. If you want to suggest improvements or report issues, please open an issue or contact the author first.
+Contributions are not formally open yet. If you want to suggest improvements or report issues, please open an issue.
 
-## License
-
-No license file is currently defined in this repository.
 
 
