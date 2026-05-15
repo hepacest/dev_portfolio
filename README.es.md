@@ -112,7 +112,3 @@ Las contribuciones no están formalmente abiertas todavía. Si deseas proponer m
 ## Licencia
 
 Actualmente este repositorio no define un archivo de licencia.
-
-## Contacto
-
-- Email: [hepacest@gmail.com](mailto:hepacest@gmail.com)
