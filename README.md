@@ -113,6 +113,4 @@ Contributions are not formally open yet. If you want to suggest improvements or 
 
 No license file is currently defined in this repository.
 
-## Contact
 
-- Email: [hepacest@gmail.com](mailto:hepacest@gmail.com)
