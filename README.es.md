@@ -107,8 +107,4 @@ En producción y en mejora continua.
 
 ## Contribución
 
-Las contribuciones no están formalmente abiertas todavía. Si deseas proponer mejoras o reportar issues, abre un issue o contáctame primero.
-
-## Licencia
-
-Actualmente este repositorio no define un archivo de licencia.
+Las contribuciones no están formalmente abiertas todavía. Si deseas proponer mejoras o reportar issues, abre un issue.
